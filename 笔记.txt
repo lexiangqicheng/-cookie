@@ -1,0 +1,35 @@
+svn （集中式版本控制系统）git(分布式版本控制系统)
+写毕业论文 每天写一点 每天都搞一个word文档保存在本地（版本） 后面写完啦 发现前面的有修改之处 找回前面版本进行修改
+作为一个开发者 最蛋疼的是该需求
+最悲催我已经做到第一百个版本了 产品说第一个版本最好
+改啦 就要去中央服务器找回第一个版本  上线
+第一版做完 保存一份 记录一份 
+每个版本都记录一份 想回退的时候就找得到
+
+
+git checkout . 把暂存区没有提交到历史区的内容全部撤回
+
+git reset --hard 版本号  把上一次暂存区的内容撤回到工作区 能够根据具体版本号 回退到具体的版本
+
+
+怎么连上远程仓库
+1.remote
+
+  1.git init 初始化仓库
+  2.git remote add 远程仓库名字 远程仓库链接
+  3.git add . 提交到暂存区
+  4.git commit -m'描述'
+  5.git push origin master push代码到中央服务器的主分支
+
+
+  分支
+  1.git init  初始化本地仓库
+  2.git clone 远程仓库地址
+  3.cd 远程仓库名字 
+  4.git branch 分支名字 
+  5.git checkout 分支名字  切换到分支目录下
+  6.git add .
+  7.git commit -m'描述'
+  8.git checkout master  切换回主分支
+  9.git merge 分支名字  合并分支
+  10.git push origin  提交主分支到中央服务器
